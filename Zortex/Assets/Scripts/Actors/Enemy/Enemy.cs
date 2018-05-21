@@ -1,23 +1,34 @@
-﻿using Assets.Scripts.Framework.Sets;
+﻿using Assets.Scripts.Actors.Enemy.Behaviour;
+using Assets.Scripts.Framework.Sets;
 using UnityEngine;
 
 namespace Assets.Scripts.Actors.Enemy {
-    public abstract class BaseEnemy : MonoBehaviour {
-        [SerializeField] protected GameObjectRuntimeSet _runtimeSet;
+    [SelectionBase]
+    public class Enemy : MonoBehaviour {
+        [SerializeField] private GameObjectRuntimeSet _runtimeSet;
         [SerializeField] private GameObject _deathExplosion;
+        [SerializeField] public BaseEnemyBehaviour _behaviour;
 
-        protected GameObject Player { get; private set; }
+        public GameObject Player { get; private set; }
         
-        protected virtual void Start() {
+        private void Start() {
             this.Player = GameObject.FindGameObjectWithTag("Player");
         }
 
-        protected void RotateTowardsPlayer(float rotationSpeed) {
+        private void Update() {
+            this._behaviour.UpdateState(this);
+        }
+
+        public void MoveTowardsPlayer(float movementSpeed) {
+            this.transform.position += this.transform.forward * movementSpeed * Time.deltaTime;
+        }
+
+        public void RotateTowardsPlayer(float rotationSpeed) {
             Vector3 directionToPlayer = (this.Player.transform.position - this.transform.position).normalized;
             this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(directionToPlayer), rotationSpeed * Time.deltaTime);
         }
 
-        protected void Die() {
+        public void Die() {
             if (this._deathExplosion != null) {
                 GameObject.Instantiate(this._deathExplosion, this.transform.position, Quaternion.identity);
             }
