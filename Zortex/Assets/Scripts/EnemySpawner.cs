@@ -3,17 +3,26 @@ using UnityEngine;
 
 namespace Assets.Scripts {
     public class EnemySpawner : MonoBehaviour {
+        [Header("Timing")]
+        [SerializeField][Range(0, 10)] private float _timeBetweenSpawns = 2f;
+        [SerializeField][Range(0, 5)] private float _timeBetweenSpawnsDecrementPerMinute = 1f;
+        [SerializeField][Range(0, 3)] private float _minimumTimeBetweenSpawns = 0.25f;
+
+        [Header("Bounds")]
+        [SerializeField] [Range(1, 10)] private float _horizontalSpawnRadius = 5f;
+        [SerializeField] [Range(1, 10)] private float _verticalSpawnRadius = 1.75f;
+
+        [Header("Enemies")]
         [SerializeField] private GameObject[] _enemiesToSpawn;
-        [SerializeField] private float _timeBetweenSpawns = 2f;
-        [SerializeField] private float _horizontalSpawnRadius = 5f;
-        [SerializeField] private float _verticalSpawnRadius = 5f;
 
         private void Start() {
             this.StartCoroutine(this.SpawnEnemies());
         }
 
         private void Update() {
-            
+            float timeBetweenSpawnsDecrementValue = this._timeBetweenSpawnsDecrementPerMinute / 60 * Time.deltaTime;
+            this._timeBetweenSpawns -= timeBetweenSpawnsDecrementValue;
+            this._timeBetweenSpawns = Mathf.Clamp(this._timeBetweenSpawns, this._minimumTimeBetweenSpawns, this._timeBetweenSpawns);
         }
 
         private IEnumerator SpawnEnemies() {
