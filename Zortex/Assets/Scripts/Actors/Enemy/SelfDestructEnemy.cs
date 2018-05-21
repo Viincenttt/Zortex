@@ -26,9 +26,7 @@ namespace Assets.Scripts.Actors.Enemy {
         }
 
         private void SelfDestruct() {
-            Debug.Log("Boom");
-
-            // TODO: Spawn explosion particle effect and destroy gameobject
+            this.Die();
         }
 
         private bool IsInSelfDestructRange {
