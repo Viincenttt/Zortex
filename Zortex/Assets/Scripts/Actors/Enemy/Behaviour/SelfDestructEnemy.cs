@@ -3,9 +3,9 @@
 namespace Assets.Scripts.Actors.Enemy.Behaviour {
     [CreateAssetMenu(menuName = "Enemy/Behaviour/SelfDestructEnemy")]
     public class SelfDestructEnemy : BaseEnemyBehaviour {
-        [SerializeField] private float _rotationSpeed = 3f;
+        [SerializeField] private float _rotationSpeed = 5f;
         [SerializeField] private float _movementSpeed = 5f;
-        [SerializeField] private float _selfDestructRange = 10f;
+        [SerializeField] private float _selfDestructRange = 0.5f;
 
         public override void UpdateState(Enemy enemy) {
             if (this.IsInSelfDestructRange(enemy)) {
