@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Actors.Enemy.Behaviour;
+using Assets.Scripts.Framework;
 using Assets.Scripts.Framework.Sets;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ namespace Assets.Scripts.Actors.Enemy {
         public GameObject Player { get; private set; }
         
         private void Start() {
-            this.Player = GameObject.FindGameObjectWithTag("Player");
+            this.Player = GameObject.FindGameObjectWithTag(KnownTags.Player);
         }
 
         private void Update() {
