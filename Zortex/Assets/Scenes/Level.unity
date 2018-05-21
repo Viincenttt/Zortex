@@ -244,8 +244,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 282840810}
-  m_LocalRotation: {x: -0.2596119, y: 0.34828344, z: -0.10102207, w: -0.8950391}
-  m_LocalPosition: {x: 1.2060966, y: 5.756423, z: -4.100643}
+  m_LocalRotation: {x: -0.33703378, y: 0.3583201, z: -0.1405533, w: -0.8592204}
+  m_LocalPosition: {x: 6.0908394, y: 8.571632, z: -6.9155426}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -322,6 +322,52 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 987f9cb1609828c47b30a4b6bace4a3b, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &543761465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 543761467}
+  - component: {fileID: 543761466}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &543761466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 543761465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9332312004bc0248abc6f15981c695d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemiesToSpawn:
+  - {fileID: 1402623447424564, guid: 987f9cb1609828c47b30a4b6bace4a3b, type: 2}
+  - {fileID: 1769409061677396, guid: 1c9f0874b703a714caf4e79496c7ab7c, type: 2}
+  _timeBetweenSpawns: 2
+  _horizontalSpawnRadius: 5
+  _verticalSpawnRadius: 5
+--- !u!4 &543761467
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 543761465}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.38, z: 3.52}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &945412642 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 331adaebee3ca504cab947fa00a2e8d0, type: 3}
@@ -428,7 +474,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4602237087643824, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.05
+      value: 0.52
       objectReference: {fileID: 0}
     - target: {fileID: 4602237087643824, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77, type: 2}
       propertyPath: m_LocalPosition.y
@@ -436,7 +482,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4602237087643824, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -2.876
+      value: -4.49
       objectReference: {fileID: 0}
     - target: {fileID: 4602237087643824, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77, type: 2}
       propertyPath: m_LocalRotation.x
@@ -511,6 +557,11 @@ Prefab:
     - target: {fileID: 198485458254144032, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77,
         type: 2}
       propertyPath: TrailModule.lifetime.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198070090073027836, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77,
+        type: 2}
+      propertyPath: EmissionModule.rateOverTime.scalar
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
