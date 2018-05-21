@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4602237087643824}
   - component: {fileID: 114143173123548800}
+  - component: {fileID: 114894364714506370}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -111,7 +112,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1138877997192028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.239, y: 2.16, z: -2.876}
+  m_LocalPosition: {x: -0.04, y: 2.16, z: -2.876}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4125944911168238}
@@ -189,7 +190,19 @@ MonoBehaviour:
   _targetSet: {fileID: 11400000, guid: 207f8e89a432dfc41886a1442f2c146c, type: 2}
   _viewRadius: 20
   _viewAngle: 30
-  _delayBetweenScans: 0.25
+  _delayBetweenScans: 0.1
+--- !u!114 &114894364714506370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1138877997192028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d53dde7f4afea144ab821f65bbd248a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gun: {fileID: 198485458254144032}
 --- !u!198 &198070090073027836
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -4741,7 +4754,7 @@ ParticleSystem:
   simulationSpeed: 1
   stopAction: 0
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -4799,7 +4812,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0

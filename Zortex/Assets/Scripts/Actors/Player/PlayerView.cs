@@ -9,7 +9,7 @@ namespace Assets.Scripts.Actors.Player {
         [SerializeField] private GameObjectRuntimeSet _targetSet;
         [SerializeField] private float _viewRadius = 20f;
         [SerializeField] [Range(0, 360)] private float _viewAngle = 30f;
-        [SerializeField] private float _delayBetweenScans = 0.25f;
+        [SerializeField] [Range(0.01f, 1)] private float _delayBetweenScans = 0.25f;
 
         public GameObject VisibleTarget { get; set; }
 
