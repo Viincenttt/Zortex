@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets.Scripts.Framework {
+namespace Assets.Scripts.Framework.Utility {
     public class SelfDestruct : MonoBehaviour {
         [SerializeField] private float _timeBeforeSelfDestruct;
 
