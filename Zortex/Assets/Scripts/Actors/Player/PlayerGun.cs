@@ -26,13 +26,18 @@ namespace Assets.Scripts.Actors.Player {
         }
 
         private void StopFiring() {
-            ParticleSystem.EmissionModule emissionModule = this._gun.emission;
-            emissionModule.enabled = false;
+            this.SetGunEmissionModuleEnabled(false);
         }
 
         private void StartFiring() {
+            this.SetGunEmissionModuleEnabled(true);
+        }
+
+        private void SetGunEmissionModuleEnabled(bool enabled) {
+            // We can't use ParticleSystem.Stop/Start for this, because this will wait untill all particles have died before
+            // starting the particlesystem. A quick fix for this to enable/disable the emissionmodule of the particle system.
             ParticleSystem.EmissionModule emissionModule = this._gun.emission;
-            emissionModule.enabled = true;
+            emissionModule.enabled = enabled;
         }
     }
 }
