@@ -16,14 +16,9 @@ namespace Assets.Scripts.Actors.Enemy {
                 this.SelfDestruct();
             }
             else {
-                this.RotateTowardsPlayer();
+                this.RotateTowardsPlayer(this._rotationSpeed);
                 this.MoveTowardsPlayer();
             }
-        }
-
-        private void RotateTowardsPlayer() {
-            Vector3 directionToPlayer = (this.Player.transform.position - this.transform.position).normalized;
-            this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(directionToPlayer), this._rotationSpeed * Time.deltaTime);
         }
 
         private void MoveTowardsPlayer() {

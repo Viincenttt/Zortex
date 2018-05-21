@@ -10,6 +10,11 @@ namespace Assets.Scripts.Actors.Enemy {
             this.Player = GameObject.FindGameObjectWithTag("Player");
         }
 
+        protected void RotateTowardsPlayer(float rotationSpeed) {
+            Vector3 directionToPlayer = (this.Player.transform.position - this.transform.position).normalized;
+            this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(directionToPlayer), rotationSpeed * Time.deltaTime);
+        }
+
         private void OnEnable() {
             this._runtimeSet.Add(this.gameObject);
         }
