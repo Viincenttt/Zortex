@@ -1,16 +1,14 @@
 ﻿using UnityEngine;
 
-namespace Assets.Scripts.AI {
+namespace Assets.Scripts.Actors.Enemy {
     [SelectionBase]
-    public class SelfDestructEnemy : MonoBehaviour {
+    public class SelfDestructEnemy : BaseEnemy {
         [SerializeField] private float _rotationSpeed = 3f;
         [SerializeField] private float _movementSpeed = 5f;
         [SerializeField] private float _selfDestructRange = 10f;
 
-        private GameObject _player;
-
-        void Start () {
-		    this._player = GameObject.FindGameObjectWithTag("Player");
+        protected override void Start () {
+		    base.Start();
         }
 
         void Update () {
@@ -24,7 +22,7 @@ namespace Assets.Scripts.AI {
         }
 
         private void RotateTowardsPlayer() {
-            Vector3 directionToPlayer = (this._player.transform.position - this.transform.position).normalized;
+            Vector3 directionToPlayer = (this.Player.transform.position - this.transform.position).normalized;
             this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(directionToPlayer), this._rotationSpeed * Time.deltaTime);
         }
 
@@ -40,7 +38,7 @@ namespace Assets.Scripts.AI {
 
         private bool IsInSelfDestructRange {
             get {
-                float distanceToPlayer = Vector3.Distance(this.transform.position, this._player.transform.position);
+                float distanceToPlayer = Vector3.Distance(this.transform.position, this.Player.transform.position);
                 return distanceToPlayer <= this._selfDestructRange;
             }
         }

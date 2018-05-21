@@ -1,14 +1,19 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.Framework.Sets;
+using UnityEngine;
 
-namespace Assets.Scripts {
+namespace Assets.Scripts.Actors {
     [SelectionBase]
     public class Player : MonoBehaviour {
+        [SerializeField] private EnemyRuntimeSet _enemySet;
         [SerializeField] private float _viewRadius = 20f;
         [SerializeField] [Range(0, 360)] private float _viewAngle = 30f;
-        
-        private void Start() { }
 
-        private void Update() { }
+        private void Start() {
+            
+        }
+
+        private void Update() {
+        }
 
         private void OnDrawGizmos() {
             float rightAngle = this._viewAngle / 2;

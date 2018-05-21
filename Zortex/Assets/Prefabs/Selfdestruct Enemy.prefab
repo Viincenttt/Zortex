@@ -217,6 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d0f347fd1f848449dcc2a349c6d884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _runtimeSet: {fileID: 11400000, guid: 207f8e89a432dfc41886a1442f2c146c, type: 2}
   _rotationSpeed: 10
   _movementSpeed: 5
   _selfDestructRange: 1
