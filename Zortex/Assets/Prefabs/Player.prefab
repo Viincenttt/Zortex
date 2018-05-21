@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b49ae7be1ff4ba54caccbcb8584fa603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemySet: {fileID: 11400000, guid: 207f8e89a432dfc41886a1442f2c146c, type: 2}
+  _targetSet: {fileID: 11400000, guid: 207f8e89a432dfc41886a1442f2c146c, type: 2}
   _viewRadius: 20
   _viewAngle: 30
+  _delayBetweenScans: 0.25

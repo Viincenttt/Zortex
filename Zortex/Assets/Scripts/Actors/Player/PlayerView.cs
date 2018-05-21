@@ -1,18 +1,17 @@
 ﻿using System.Collections;
 using System.Linq;
-using Assets.Scripts.Actors.Enemy;
 using Assets.Scripts.Framework.Sets;
 using UnityEngine;
 
 namespace Assets.Scripts.Actors.Player {
     [SelectionBase]
     public class PlayerView : MonoBehaviour {
-        [SerializeField] private EnemyRuntimeSet _enemySet;
+        [SerializeField] private GameObjectRuntimeSet _targetSet;
         [SerializeField] private float _viewRadius = 20f;
         [SerializeField] [Range(0, 360)] private float _viewAngle = 30f;
         [SerializeField] private float _delayBetweenScans = 0.25f;
 
-        public BaseEnemy VisibleTarget { get; set; }
+        public GameObject VisibleTarget { get; set; }
 
         private void Start() {
             this.StartCoroutine(this.FindClosestVisibleEnemyWithDelay());
@@ -25,28 +24,28 @@ namespace Assets.Scripts.Actors.Player {
             }
         }
 
-        private BaseEnemy FindClosestVisibleEnemy() {
-            foreach (BaseEnemy enemy in this._enemySet.Items.OrderBy(x => Vector3.Distance(x.transform.position, this.transform.position))) {
-                if (this.IsEnemyInView(enemy)) {
-                    return enemy;
+        private GameObject FindClosestVisibleEnemy() {
+            foreach (GameObject target in this._targetSet.Items.OrderBy(x => Vector3.Distance(x.transform.position, this.transform.position))) {
+                if (this.IsEnemyInView(target)) {
+                    return target;
                 }
             }
 
             return null;
         }
 
-        private bool IsEnemyInView(BaseEnemy enemy) {
-            if (!this.IsEnemyInRange(enemy)) {
+        private bool IsEnemyInView(GameObject target) {
+            if (!this.IsEnemyInRange(target)) {
                 return false;
             }
 
-            Vector3 directionToTarget = (enemy.transform.position - this.transform.position).normalized;
+            Vector3 directionToTarget = (target.transform.position - this.transform.position).normalized;
             float angleToTarget = Vector3.Angle(this.transform.forward, directionToTarget);
             return angleToTarget <= this._viewAngle / 2;
         }
 
-        private bool IsEnemyInRange(BaseEnemy enemy) {
-            return Vector3.Distance(this.transform.position, enemy.transform.position) <= this._viewRadius;
+        private bool IsEnemyInRange(GameObject target) {
+            return Vector3.Distance(this.transform.position, target.transform.position) <= this._viewRadius;
         }
 
         private void OnDrawGizmos() {

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Actors.Enemy {
     public abstract class BaseEnemy : MonoBehaviour {
-        [SerializeField] protected EnemyRuntimeSet _runtimeSet;
+        [SerializeField] protected GameObjectRuntimeSet _runtimeSet;
         protected GameObject Player { get; private set; }
         
         protected virtual void Start() {
@@ -11,11 +11,11 @@ namespace Assets.Scripts.Actors.Enemy {
         }
 
         private void OnEnable() {
-            this._runtimeSet.Add(this);
+            this._runtimeSet.Add(this.gameObject);
         }
 
         private void OnDisable() {
-            this._runtimeSet.Remove(this);
+            this._runtimeSet.Remove(this.gameObject);
         }
     }
 }
