@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4125944911168238}
   - component: {fileID: 33152102007003572}
   - component: {fileID: 23365934757031782}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,9 +36,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4602237087643824}
+  - component: {fileID: 65678974153568068}
   - component: {fileID: 114143173123548800}
   - component: {fileID: 114894364714506370}
-  m_Layer: 0
+  - component: {fileID: 114193470461601586}
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -55,7 +57,7 @@ GameObject:
   - component: {fileID: 4896134480647230}
   - component: {fileID: 198070090073027836}
   - component: {fileID: 199789293061851710}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Engine emission
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +74,7 @@ GameObject:
   - component: {fileID: 4373824216751672}
   - component: {fileID: 198485458254144032}
   - component: {fileID: 199033963632851176}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +114,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1138877997192028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.52, y: 2.16, z: -4.49}
+  m_LocalPosition: {x: 0.52, y: 2.16, z: -4.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4125944911168238}
@@ -176,6 +178,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1058085787050902}
   m_Mesh: {fileID: 4300000, guid: 993ffd7f99e00e3449b28ec2f9406358, type: 3}
+--- !u!65 &65678974153568068
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1138877997192028}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.35400534, z: 1.1779826}
+  m_Center: {x: 0, y: -0.016801119, z: 0.088991284}
 --- !u!114 &114143173123548800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -191,6 +205,20 @@ MonoBehaviour:
   _viewRadius: 20
   _viewAngle: 30
   _delayBetweenScans: 0.1
+--- !u!114 &114193470461601586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1138877997192028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4739b6ab70efb5345a461b015098f527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maximumHealth: 2147483647
+  _deathExplosion: {fileID: 198856767812365072, guid: 2cdf63fb8b1725f4badd12bb72fc0a59,
+    type: 2}
 --- !u!114 &114894364714506370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8141,11 +8169,11 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
-    type: 0
+    type: 1
     collisionMode: 0
-    colliderForce: 0
+    colliderForce: 1
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
@@ -8264,7 +8292,7 @@ ParticleSystem:
     m_EnergyLossOnCollision:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -8314,16 +8342,16 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    minKillSpeed: 0
-    maxKillSpeed: 10000
+    minKillSpeed: 1
+    maxKillSpeed: 1
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 1024
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:

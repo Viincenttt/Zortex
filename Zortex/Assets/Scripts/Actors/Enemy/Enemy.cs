@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.Actors.Enemy.Behaviour;
 using Assets.Scripts.Framework;
+using Assets.Scripts.Framework.Extensions;
 using Assets.Scripts.Framework.Sets;
 using UnityEngine;
 
@@ -17,7 +18,9 @@ namespace Assets.Scripts.Actors.Enemy {
         }
 
         private void Update() {
-            this._behaviour.UpdateState(this);
+            if (!this.Player.IsDestroyed()) {
+                this._behaviour.UpdateState(this);
+            }
         }
 
         public void MoveTowardsPlayer(float movementSpeed) {

@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4915850964086986}
   - component: {fileID: 114378706742892414}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Shooting Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4789294123903644}
   - component: {fileID: 198947541459281380}
   - component: {fileID: 199879008636817040}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 4092016770623774}
   - component: {fileID: 33418804440554922}
   - component: {fileID: 23170595761919834}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3558,9 +3558,9 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
-    type: 0
+    type: 1
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
@@ -3732,15 +3732,15 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     minKillSpeed: 0
-    maxKillSpeed: 10000
+    maxKillSpeed: 0
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 512
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:

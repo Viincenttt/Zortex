@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4765259482115678}
   - component: {fileID: 33012421792387012}
   - component: {fileID: 23562475389848284}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Engine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4591812108980072}
   - component: {fileID: 33055321295405056}
   - component: {fileID: 23748428679104598}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4148338563658302}
   - component: {fileID: 114256229856468522}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Selfdestruct Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 4344747990060694}
   - component: {fileID: 198170093049494924}
   - component: {fileID: 199802384783186936}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Emission
   m_TagString: Untagged
   m_Icon: {fileID: 0}
