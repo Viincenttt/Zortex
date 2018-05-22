@@ -40,6 +40,9 @@ GameObject:
   - component: {fileID: 114143173123548800}
   - component: {fileID: 114894364714506370}
   - component: {fileID: 114193470461601586}
+  - component: {fileID: 54198773304192620}
+  - component: {fileID: 114967549162752412}
+  - component: {fileID: 114786213018281538}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -114,7 +117,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1138877997192028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.602, y: 1.082, z: -4.52}
+  m_LocalPosition: {x: -0.38, y: 1.082, z: -3.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4125944911168238}
@@ -178,6 +181,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1058085787050902}
   m_Mesh: {fileID: 4300000, guid: 993ffd7f99e00e3449b28ec2f9406358, type: 3}
+--- !u!54 &54198773304192620
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1138877997192028}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &65678974153568068
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -216,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4739b6ab70efb5345a461b015098f527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maximumHealth: 1
+  _maximumHealth: 1000000
   _deathExplosion: {fileID: 198856767812365072, guid: 2cdf63fb8b1725f4badd12bb72fc0a59,
     type: 2}
   _onKilled:
@@ -235,6 +253,23 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114786213018281538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1138877997192028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 0
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
 --- !u!114 &114894364714506370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -247,6 +282,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gun: {fileID: 198485458254144032}
+--- !u!114 &114967549162752412
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1138877997192028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3abaf4521bf2344ea21ed3020b98eb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableWhenIdle: 1
+  allowedNearTouchControllers: 0
+  allowedTouchControllers: 0
+  ignoredColliders: []
+  isGrabbable: 0
+  holdButtonToGrab: 0
+  stayGrabbedOnTeleport: 1
+  validDrop: 0
+  grabOverrideButton: 0
+  allowedGrabControllers: 0
+  grabAttachMechanicScript: {fileID: 0}
+  secondaryGrabActionScript: {fileID: 0}
+  isUsable: 0
+  holdButtonToUse: 1
+  useOnlyIfGrabbed: 0
+  pointerActivatesUseAction: 0
+  useOverrideButton: 0
+  allowedUseControllers: 0
+  objectHighlighter: {fileID: 0}
+  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  usingState: 0
 --- !u!198 &198070090073027836
 ParticleSystem:
   m_ObjectHideFlags: 1
