@@ -219,6 +219,22 @@ MonoBehaviour:
   _maximumHealth: 1
   _deathExplosion: {fileID: 198856767812365072, guid: 2cdf63fb8b1725f4badd12bb72fc0a59,
     type: 2}
+  _onKilled:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: d792a24fb498a2a47b98edad2c8c3518, type: 2}
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114894364714506370
 MonoBehaviour:
   m_ObjectHideFlags: 1

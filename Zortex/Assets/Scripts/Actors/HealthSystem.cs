@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace Assets.Scripts.Actors {
     public class HealthSystem : MonoBehaviour {
         [SerializeField] private int _maximumHealth = 5;
         [SerializeField] private ParticleSystem _deathExplosion;
+        [SerializeField] private UnityEvent _onKilled;
 
         private int _currentHealth;
 
@@ -32,6 +34,7 @@ namespace Assets.Scripts.Actors {
                 ParticleSystem explosion = GameObject.Instantiate(this._deathExplosion, this.transform.position, Quaternion.identity);
                 explosion.gameObject.layer = this.gameObject.layer;
             }
+            this._onKilled.Invoke();
 
             GameObject.Destroy(this.gameObject);
         }
