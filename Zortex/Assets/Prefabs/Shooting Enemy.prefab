@@ -19,7 +19,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4915850964086986}
+  - component: {fileID: 65286420638807242}
   - component: {fileID: 114378706742892414}
+  - component: {fileID: 114478273080753074}
   m_Layer: 10
   m_Name: Shooting Enemy
   m_TagString: Untagged
@@ -145,6 +147,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1891330649841104}
   m_Mesh: {fileID: 4300000, guid: a53d39a13dbd9f1439265b8581e6ece1, type: 3}
+--- !u!65 &65286420638807242
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1769409061677396}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.62694716, y: 0.5902102, z: 0.49078673}
+  m_Center: {x: -0.03014195, y: 0.062402964, z: 0.055994183}
 --- !u!114 &114378706742892414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -160,6 +174,20 @@ MonoBehaviour:
   _deathExplosion: {fileID: 1693524367565056, guid: 2cdf63fb8b1725f4badd12bb72fc0a59,
     type: 2}
   _behaviour: {fileID: 11400000, guid: d4cb03f45107c2a40b2bb12f42b2d0b7, type: 2}
+--- !u!114 &114478273080753074
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1769409061677396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4739b6ab70efb5345a461b015098f527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maximumHealth: 50
+  _deathExplosion: {fileID: 198856767812365072, guid: 2cdf63fb8b1725f4badd12bb72fc0a59,
+    type: 2}
 --- !u!198 &198947541459281380
 ParticleSystem:
   m_ObjectHideFlags: 1
