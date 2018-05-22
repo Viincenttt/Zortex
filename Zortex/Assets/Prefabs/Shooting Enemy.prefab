@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4739b6ab70efb5345a461b015098f527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maximumHealth: 50
+  _maximumHealth: 4
   _deathExplosion: {fileID: 198856767812365072, guid: 2cdf63fb8b1725f4badd12bb72fc0a59,
     type: 2}
 --- !u!198 &198947541459281380
