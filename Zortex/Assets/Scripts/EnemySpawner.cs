@@ -15,6 +15,9 @@ namespace Assets.Scripts {
         [Header("Enemies")]
         [SerializeField] private GameObject[] _enemiesToSpawn;
 
+        [Header("Effects")]
+        [SerializeField] private GameObject _effectToSpawn;
+
         private void Start() {
             this.StartCoroutine(this.SpawnEnemies());
         }
@@ -32,10 +35,16 @@ namespace Assets.Scripts {
             }
         }
 
+        private void SpawnEffect(Vector3 position) {
+            GameObject.Instantiate(this._effectToSpawn, position, Quaternion.identity, this.transform);
+        }
+
         private void SpawnEnemy() {
             Vector3 spawnPosition = this.GetRandomSpawnPosition();
             GameObject enemyToSpawn = this.GetRandomEnemyToSpawn();
             GameObject.Instantiate(enemyToSpawn, spawnPosition, Quaternion.identity, this.transform);
+
+            this.SpawnEffect(spawnPosition);
         }
         
         private GameObject GetRandomEnemyToSpawn() {
