@@ -114,53 +114,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &169166914
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4602237087643824, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -0.38
-      objectReference: {fileID: 0}
-    - target: {fileID: 4602237087643824, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 4602237087643824, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -2.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 4602237087643824, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4602237087643824, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4602237087643824, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4602237087643824, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4602237087643824, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114193470461601586, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77,
-        type: 2}
-      propertyPath: _maximumHealth
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,6 +295,48 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: edae3f91b08e3484bba3fd851fb4d11b, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &920088869
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4602237087643824, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602237087643824, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602237087643824, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602237087643824, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602237087643824, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602237087643824, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602237087643824, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602237087643824, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5f3db51f79f3a0b4ca7ec1d0c098af77, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &945412642 stripped
 Transform:
