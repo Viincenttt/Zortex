@@ -2,18 +2,18 @@
 
 namespace Assets.Scripts {
     public class ScoreBoard : MonoBehaviour {
+        [SerializeField] private TextMesh _scoreText;
+
         public int _currentScore = 0;
 
         public int Score {
             get { return this._currentScore; }
         }
-        
-        public void ResetScore() {
-            this._currentScore = 0;
-        }
 
         public void OnEnemyKilled() {
             this._currentScore++;
+
+            this._scoreText.text = this._currentScore.ToString();
         }
     }
 }
