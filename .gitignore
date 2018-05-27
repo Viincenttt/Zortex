@@ -34,3 +34,11 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Zortex/Assets/Audio/Music/Furious Freak.mp3
+Zortex/Assets/Audio/Music/Furious Freak.mp3.meta
+Zortex/Assets/Audio/Music/Ouroboros.mp3
+Zortex/Assets/Audio/Music/Ouroboros.mp3.meta
+Zortex/Assets/Audio/Music/Shiny Tech.mp3
+Zortex/Assets/Audio/Music/Shiny Tech.mp3.meta
+Zortex/Assets/Prefabs/MusicPlayer.prefab
+Zortex/Assets/Prefabs/MusicPlayer.prefab.meta
