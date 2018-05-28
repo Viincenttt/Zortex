@@ -148,7 +148,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1138877997192028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.38, y: 1.62, z: -2.06}
+  m_LocalPosition: {x: -0.38, y: 1.714, z: -4.97}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 4125944911168238}
@@ -348,7 +348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _targetSet: {fileID: 11400000, guid: 207f8e89a432dfc41886a1442f2c146c, type: 2}
   _viewRadius: 20
-  _viewAngle: 15
+  _viewAngle: 17.5
   _delayBetweenScans: 0.1
 --- !u!114 &114193470461601586
 MonoBehaviour:
@@ -364,6 +364,7 @@ MonoBehaviour:
   _maximumHealth: 1
   _deathExplosion: {fileID: 198856767812365072, guid: 2cdf63fb8b1725f4badd12bb72fc0a59,
     type: 2}
+  _impactEffect: {fileID: 0}
   _onKilled:
     m_PersistentCalls:
       m_Calls:
