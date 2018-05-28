@@ -5,6 +5,7 @@ namespace Assets.Scripts.Actors {
     public class HealthSystem : MonoBehaviour {
         [SerializeField] private int _maximumHealth = 5;
         [SerializeField] private ParticleSystem _deathExplosion;
+        [SerializeField] private ParticleSystem _impactEffect;
         [SerializeField] private UnityEvent _onKilled;
 
         private int _currentHealth;
@@ -13,12 +14,13 @@ namespace Assets.Scripts.Actors {
             this._currentHealth = this._maximumHealth;
         }
 
-        void OnParticleCollision(GameObject other) {
-            this.TakeDamage();
+        void OnParticleCollision(GameObject shooter) {
+            this.TakeDamage(shooter);
         }
 
-        private void TakeDamage() {
+        private void TakeDamage(GameObject shooter) {
             this.DecreaseHealth();
+            this.SpawnImpactEffect(shooter);
 
             if (this.IsDead) {
                 this.Explode();
@@ -27,6 +29,14 @@ namespace Assets.Scripts.Actors {
 
         private void DecreaseHealth() {
             this._currentHealth -= 1;
+        }
+
+        private void SpawnImpactEffect(GameObject shooter) {
+            if (this._impactEffect != null) {
+                Vector3 directionToShooter = (shooter.transform.position - this.transform.position).normalized * 0.40f;
+                Vector3 spawnPosition = this.transform.position + directionToShooter;
+                GameObject.Instantiate(this._impactEffect, spawnPosition, Quaternion.identity);
+            }
         }
 
         private void Explode() {
