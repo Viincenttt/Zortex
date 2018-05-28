@@ -51,11 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9332312004bc0248abc6f15981c695d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeBetweenSpawns: 2
-  _timeBetweenSpawnsDecrementPerMinute: 1
-  _minimumTimeBetweenSpawns: 0.25
-  _horizontalSpawnRadius: 5
-  _verticalSpawnRadius: 1.75
+  _timeBetweenSpawns: 1.5
+  _timeBetweenSpawnsDecrementPerMinute: 0.6
+  _minimumTimeBetweenSpawns: 0.4
+  _horizontalSpawnRadius: 2
+  _verticalSpawnRadius: 1.9
   _enemiesToSpawn:
   - {fileID: 1402623447424564, guid: 987f9cb1609828c47b30a4b6bace4a3b, type: 2}
   - {fileID: 1769409061677396, guid: 1c9f0874b703a714caf4e79496c7ab7c, type: 2}

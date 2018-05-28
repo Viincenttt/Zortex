@@ -348,7 +348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _targetSet: {fileID: 11400000, guid: 207f8e89a432dfc41886a1442f2c146c, type: 2}
   _viewRadius: 20
-  _viewAngle: 30
+  _viewAngle: 15
   _delayBetweenScans: 0.1
 --- !u!114 &114193470461601586
 MonoBehaviour:
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4739b6ab70efb5345a461b015098f527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maximumHealth: 300000
+  _maximumHealth: 1
   _deathExplosion: {fileID: 198856767812365072, guid: 2cdf63fb8b1725f4badd12bb72fc0a59,
     type: 2}
   _onKilled:

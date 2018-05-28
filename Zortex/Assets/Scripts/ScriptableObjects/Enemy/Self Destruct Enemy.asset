@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Self Destruct Enemy
   m_EditorClassIdentifier: 
   _rotationSpeed: 5
-  _movementSpeed: 2
-  _selfDestructRange: 0.5
+  _movementSpeed: 1.25
+  _selfDestructRange: 0.25
