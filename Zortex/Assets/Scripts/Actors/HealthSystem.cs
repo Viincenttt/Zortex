@@ -3,9 +3,15 @@ using UnityEngine.Events;
 
 namespace Assets.Scripts.Actors {
     public class HealthSystem : MonoBehaviour {
+        [Header("Health", order = 1)]
         [SerializeField] private int _maximumHealth = 5;
-        [SerializeField] private ParticleSystem _deathExplosion;
+
+        [Header("Impact", order = 2)]
         [SerializeField] private ParticleSystem _impactEffect;
+        [SerializeField] private Transform _impactEffectPosition;
+
+        [Header("Death", order = 3)]
+        [SerializeField] private ParticleSystem _deathExplosion;
         [SerializeField] private UnityEvent _onKilled;
 
         private int _currentHealth;
@@ -32,8 +38,8 @@ namespace Assets.Scripts.Actors {
         }
 
         private void SpawnImpactEffect(GameObject shooter) {
-            if (this._impactEffect != null) {
-                Vector3 directionToShooter = (shooter.transform.position - this.transform.position).normalized * 0.40f;
+            if (this._impactEffect != null && this._impactEffectPosition != null) {
+                Vector3 directionToShooter = (shooter.transform.position - this._impactEffectPosition.transform.position).normalized;
                 Vector3 spawnPosition = this.transform.position + directionToShooter;
                 GameObject.Instantiate(this._impactEffect, spawnPosition, Quaternion.identity);
             }
