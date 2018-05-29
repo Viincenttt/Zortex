@@ -55,8 +55,6 @@ namespace Assets.Scripts.Actors {
             GameObject.Destroy(this.gameObject);
         }
 
-        private bool IsDead {
-            get { return this._currentHealth <= 0; }
-        }
+        private bool IsDead => this._currentHealth <= 0;
     }
 }

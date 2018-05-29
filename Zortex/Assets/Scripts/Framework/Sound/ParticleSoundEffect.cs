@@ -28,8 +28,6 @@ namespace Assets.Scripts.Framework.Sound {
             this._audioSource.PlayOneShot(this._onEmitSoundEffect);
         }
 
-        private bool HasParticleSpawnedSinceLastUpdate {
-            get { return this._particleSystem.particleCount > this._lastNumberOfParticles; }
-        }
+        private bool HasParticleSpawnedSinceLastUpdate => this._particleSystem.particleCount > this._lastNumberOfParticles;
     }
 }

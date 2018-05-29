@@ -6,9 +6,7 @@ namespace Assets.Scripts {
 
         public int _currentScore = 0;
 
-        public int Score {
-            get { return this._currentScore; }
-        }
+        public int Score => this._currentScore;
 
         public void OnEnemyKilled() {
             this._currentScore++;
