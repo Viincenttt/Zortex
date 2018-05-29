@@ -364,9 +364,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maximumHealth: 1
+  _impactEffect: {fileID: 0}
+  _impactEffectPosition: {fileID: 0}
   _deathExplosion: {fileID: 198856767812365072, guid: 2cdf63fb8b1725f4badd12bb72fc0a59,
     type: 2}
-  _impactEffect: {fileID: 0}
   _onKilled:
     m_PersistentCalls:
       m_Calls:
@@ -5146,7 +5147,7 @@ ParticleSystem:
   stopAction: 0
   looping: 1
   prewarm: 1
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
