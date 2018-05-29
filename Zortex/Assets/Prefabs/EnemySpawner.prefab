@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4044887251850902}
   - component: {fileID: 114189601425123282}
+  - component: {fileID: 114582985437435114}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -62,3 +63,31 @@ MonoBehaviour:
   - {fileID: 1769409061677396, guid: 1c9f0874b703a714caf4e79496c7ab7c, type: 2}
   _effectToSpawn: {fileID: 1037395497828698, guid: e4ccfba607cf0064ebdd29dcc167cd46,
     type: 2}
+--- !u!114 &114582985437435114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1932505314471726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5b32f8e2f169ca429aacb88d388ca19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 8738c1d6a8b5eeb41b032719c3dd0dde, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114189601425123282}
+        m_MethodName: StartSpawningEnemies
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null

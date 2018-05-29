@@ -19,7 +19,7 @@ namespace Assets.Scripts {
         [Header("Effects")]
         [SerializeField] private GameObject _effectToSpawn;
 
-        private void Start() {
+        public void StartSpawningEnemies() {
             this.StartCoroutine(this.SpawnEnemies());
         }
 
