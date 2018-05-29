@@ -49,17 +49,24 @@ namespace Assets.Scripts.Actors.Player {
         }
 
         private void OnDrawGizmos() {
-            float rightAngle = this._viewAngle / 2;
-            float leftAngle = -this._viewAngle / 2;
+            Gizmos.color = Color.green;
 
-            this.DrawAngleGizmoView(rightAngle);
-            this.DrawAngleGizmoView(leftAngle);
+            float positiveAngle = this._viewAngle / 2;
+            float negativeAngle = -positiveAngle;
+            
+            // Draw the left/right view angles
+            this.DrawAngleGizmoView(positiveAngle, this.transform.up);
+            this.DrawAngleGizmoView(negativeAngle, this.transform.up);
+
+            // Draw the upper/lower view angles
+            this.DrawAngleGizmoView(positiveAngle, this.transform.right);
+            this.DrawAngleGizmoView(negativeAngle, this.transform.right);
         }
 
-        private void DrawAngleGizmoView(float angle) {
-            Quaternion angleAxis = Quaternion.AngleAxis(angle, this.transform.up);
+        private void DrawAngleGizmoView(float angle, Vector3 axis) {
+            Quaternion angleAxis = Quaternion.AngleAxis(angle, axis);
             Vector3 lineEndPoint = angleAxis * (this.transform.forward * this._viewRadius) + this.transform.position;
-
+            
             Gizmos.DrawLine(this.transform.position, lineEndPoint);
         }
     }
