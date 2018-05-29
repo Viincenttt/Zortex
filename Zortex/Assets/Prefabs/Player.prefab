@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 114967549162752412}
   - component: {fileID: 114786213018281538}
   - component: {fileID: 114468932346388918}
+  - component: {fileID: 114633329441762304}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -404,6 +405,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onEmitSoundEffect: {fileID: 8300000, guid: db1bf3172392dae4092f07d6d11106eb, type: 3}
+--- !u!114 &114633329441762304
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1138877997192028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 069f22b475dd2da42becf7aa319a1ab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToAffect: {fileID: 0}
+  objectToMonitor: {fileID: 114967549162752412}
+  gameObjectActiveByDefault: 1
+  rendererVisibleByDefault: 1
+  gameObjectActiveOnNearTouch: 1
+  rendererVisibleOnNearTouch: 1
+  nearTouchAppearanceDelay: 0
+  nearUntouchAppearanceDelay: 0
+  validNearTouchInteractingObject: 0
+  gameObjectActiveOnTouch: 1
+  rendererVisibleOnTouch: 1
+  touchAppearanceDelay: 0
+  untouchAppearanceDelay: 0
+  validTouchInteractingObject: 0
+  gameObjectActiveOnGrab: 1
+  rendererVisibleOnGrab: 0
+  grabAppearanceDelay: 0
+  ungrabAppearanceDelay: 0
+  validGrabInteractingObject: 0
+  gameObjectActiveOnUse: 1
+  rendererVisibleOnUse: 0
+  useAppearanceDelay: 0
+  unuseAppearanceDelay: 0
+  validUseInteractingObject: 0
 --- !u!114 &114786213018281538
 MonoBehaviour:
   m_ObjectHideFlags: 1
