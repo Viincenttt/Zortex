@@ -9,8 +9,9 @@ namespace Assets.Scripts {
         [SerializeField][Range(0, 3)] private float _minimumTimeBetweenSpawns = 0.25f;
 
         [Header("Bounds")]
-        [SerializeField] [Range(1, 10)] private float _horizontalSpawnRadius = 5f;
-        [SerializeField] [Range(1, 10)] private float _verticalSpawnRadius = 1.75f;
+        [SerializeField] [Range(1, 10)] private float _xSpawnSize = 5f;
+        [SerializeField] [Range(1, 10)] private float _ySpawnSize = 1.75f;
+        [SerializeField] [Range(1, 10)] private float _zSpawnSize = 2f;
 
         [Header("Enemies")]
         [SerializeField] private GameObject[] _enemiesToSpawn;
@@ -53,11 +54,16 @@ namespace Assets.Scripts {
         }
 
         private Vector3 GetRandomSpawnPosition() {
-            float randomX = Random.Range(this.transform.transform.position.x - this._horizontalSpawnRadius, this.transform.position.x + this._horizontalSpawnRadius);
-            float randomY = Random.Range(this.transform.transform.position.y - this._verticalSpawnRadius, this.transform.position.y + this._verticalSpawnRadius);
-            float randomZ = Random.Range(this.transform.position.z - this._horizontalSpawnRadius, this.transform.position.z + this._horizontalSpawnRadius);
+            float randomX = Random.Range(this.transform.transform.position.x - this._xSpawnSize / 2, this.transform.position.x + this._xSpawnSize / 2);
+            float randomY = Random.Range(this.transform.transform.position.y - this._ySpawnSize / 2, this.transform.position.y + this._ySpawnSize / 2);
+            float randomZ = Random.Range(this.transform.transform.position.y - this._zSpawnSize / 2, this.transform.position.z + this._zSpawnSize / 2);
 
             return new Vector3(randomX, randomY, randomZ);
+        }
+
+        private void OnDrawGizmos() {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireCube(this.transform.position, new Vector3(this._xSpawnSize, this._ySpawnSize, this._zSpawnSize));
         }
     }
 }
