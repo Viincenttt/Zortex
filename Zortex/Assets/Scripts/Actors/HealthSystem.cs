@@ -28,8 +28,8 @@ namespace Assets.Scripts.Actors {
             this.DecreaseHealth();
             this.SpawnImpactEffect(shooter);
 
-            if (this.IsDead) {
-                this.Explode();
+            if (!this.HasHealthRemaining) {
+                this.Die();
             }
         }
 
@@ -45,7 +45,7 @@ namespace Assets.Scripts.Actors {
             }
         }
 
-        private void Explode() {
+        public void Die() {
             if (this._deathExplosion != null) {
                 ParticleSystem explosion = GameObject.Instantiate(this._deathExplosion, this.transform.position, Quaternion.identity);
                 explosion.gameObject.layer = this.gameObject.layer;
@@ -55,6 +55,6 @@ namespace Assets.Scripts.Actors {
             GameObject.Destroy(this.gameObject);
         }
 
-        private bool IsDead => this._currentHealth <= 0;
+        private bool HasHealthRemaining => this._currentHealth > 0;
     }
 }

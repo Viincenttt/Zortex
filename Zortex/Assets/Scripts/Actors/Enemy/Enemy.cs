@@ -6,15 +6,18 @@ using UnityEngine;
 
 namespace Assets.Scripts.Actors.Enemy {
     [SelectionBase]
+    [RequireComponent(typeof(HealthSystem))]
     public class Enemy : MonoBehaviour {
         [SerializeField] private GameObjectRuntimeSet _runtimeSet;
-        [SerializeField] private GameObject _deathExplosion;
         [SerializeField] public BaseEnemyBehaviour _behaviour;
 
         public GameObject Player { get; private set; }
+
+        private HealthSystem _healthSystem;
         
         private void Start() {
             this.Player = GameObject.FindGameObjectWithTag(KnownTags.Player);
+            this._healthSystem = this.GetComponent<HealthSystem>();
         }
 
         private void Update() {
@@ -33,11 +36,7 @@ namespace Assets.Scripts.Actors.Enemy {
         }
 
         public void Die() {
-            if (this._deathExplosion != null) {
-                GameObject.Instantiate(this._deathExplosion, this.transform.position, Quaternion.identity);
-            }
-
-            GameObject.Destroy(this.gameObject);
+            this._healthSystem.Die();
         }
 
         private void OnEnable() {
