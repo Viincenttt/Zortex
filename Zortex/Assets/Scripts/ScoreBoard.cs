@@ -4,9 +4,7 @@ namespace Assets.Scripts {
     public class ScoreBoard : MonoBehaviour {
         [SerializeField] private TextMesh _scoreText;
 
-        public int _currentScore = 0;
-
-        public int Score => this._currentScore;
+        private int _currentScore = 0;
 
         public void OnEnemyKilled() {
             this._currentScore++;
