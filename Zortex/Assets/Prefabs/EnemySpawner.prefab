@@ -52,8 +52,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9332312004bc0248abc6f15981c695d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeBetweenSpawns: 1.5
-  _timeBetweenSpawnsDecrementPerMinute: 0.6
+  _timeBetweenSpawns: 1.35
+  _timeBetweenSpawnsDecrementPerMinute: 0.5
   _minimumTimeBetweenSpawns: 0.4
   _xSpawnSize: 10
   _ySpawnSize: 5
