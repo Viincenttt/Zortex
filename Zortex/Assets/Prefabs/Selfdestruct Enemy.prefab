@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4739b6ab70efb5345a461b015098f527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maximumHealth: 2
+  _maximumHealth: 1
   _impactEffect: {fileID: 198286195669262762, guid: 8cc1686d7f7e4d848ae64b06613ffccf,
     type: 2}
   _impactEffectPosition: {fileID: 4965702761509962}
