@@ -35,8 +35,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4915850964086986}
   - component: {fileID: 65286420638807242}
-  - component: {fileID: 114378706742892414}
   - component: {fileID: 114478273080753074}
+  - component: {fileID: 114409316365261744}
   m_Layer: 10
   m_Name: Shooting Enemy
   m_TagString: Untagged
@@ -188,7 +188,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.62694716, y: 0.5902102, z: 0.49078673}
   m_Center: {x: -0.03014195, y: 0.062402964, z: 0.055994183}
---- !u!114 &114378706742892414
+--- !u!114 &114409316365261744
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -196,13 +196,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1769409061677396}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9738bdc5e6574fb4290f5c5236510596, type: 3}
+  m_Script: {fileID: 11500000, guid: da5189fd20c6dea4e978a627c5f04e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _runtimeSet: {fileID: 11400000, guid: 207f8e89a432dfc41886a1442f2c146c, type: 2}
-  _deathExplosion: {fileID: 1693524367565056, guid: 2cdf63fb8b1725f4badd12bb72fc0a59,
-    type: 2}
-  _behaviour: {fileID: 11400000, guid: d4cb03f45107c2a40b2bb12f42b2d0b7, type: 2}
+  _rotationSpeed: 3
 --- !u!114 &114478273080753074
 MonoBehaviour:
   m_ObjectHideFlags: 1

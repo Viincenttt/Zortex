@@ -54,8 +54,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4148338563658302}
   - component: {fileID: 65796621274421038}
-  - component: {fileID: 114256229856468522}
   - component: {fileID: 114490375417126320}
+  - component: {fileID: 114305301792367936}
   m_Layer: 10
   m_Name: Selfdestruct Enemy
   m_TagString: Untagged
@@ -261,7 +261,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5098268, y: 0.5028386, z: 0.500622}
   m_Center: {x: -0.02787131, y: 0.2485807, z: -0.06882897}
---- !u!114 &114256229856468522
+--- !u!114 &114305301792367936
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -269,13 +269,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1402623447424564}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9738bdc5e6574fb4290f5c5236510596, type: 3}
+  m_Script: {fileID: 11500000, guid: 83d0f347fd1f848449dcc2a349c6d884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _runtimeSet: {fileID: 11400000, guid: 207f8e89a432dfc41886a1442f2c146c, type: 2}
-  _deathExplosion: {fileID: 1693524367565056, guid: 2cdf63fb8b1725f4badd12bb72fc0a59,
-    type: 2}
-  _behaviour: {fileID: 11400000, guid: cfbe8a5a3011c314b92dbb5ae997f771, type: 2}
+  _rotationSpeed: 3
+  _movementSpeed: 0.75
+  _selfDestructRange: 0.25
 --- !u!114 &114490375417126320
 MonoBehaviour:
   m_ObjectHideFlags: 1
