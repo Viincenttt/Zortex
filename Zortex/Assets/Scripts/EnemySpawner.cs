@@ -56,7 +56,7 @@ namespace Assets.Scripts {
         private Vector3 GetRandomSpawnPosition() {
             float randomX = Random.Range(this.transform.transform.position.x - this._xSpawnSize / 2, this.transform.position.x + this._xSpawnSize / 2);
             float randomY = Random.Range(this.transform.transform.position.y - this._ySpawnSize / 2, this.transform.position.y + this._ySpawnSize / 2);
-            float randomZ = Random.Range(this.transform.transform.position.y - this._zSpawnSize / 2, this.transform.position.z + this._zSpawnSize / 2);
+            float randomZ = Random.Range(this.transform.transform.position.z - this._zSpawnSize / 2, this.transform.position.z + this._zSpawnSize / 2);
 
             return new Vector3(randomX, randomY, randomZ);
         }
