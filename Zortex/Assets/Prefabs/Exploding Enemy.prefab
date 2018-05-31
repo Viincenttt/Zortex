@@ -35,8 +35,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4843193846942810}
   - component: {fileID: 65580378067787854}
-  - component: {fileID: 114640862979683872}
   - component: {fileID: 114027246069366072}
+  - component: {fileID: 114935997934679046}
   m_Layer: 10
   m_Name: Exploding Enemy
   m_TagString: Untagged
@@ -94,7 +94,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1466595599053354}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.139, z: 0}
+  m_LocalPosition: {x: 0, y: 0.79, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4001641974365806}
@@ -179,7 +179,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114640862979683872
+--- !u!114 &114935997934679046
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -187,10 +187,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1466595599053354}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9738bdc5e6574fb4290f5c5236510596, type: 3}
+  m_Script: {fileID: 11500000, guid: 38950236017b99247a3259aca818b584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _runtimeSet: {fileID: 11400000, guid: 207f8e89a432dfc41886a1442f2c146c, type: 2}
-  _deathExplosion: {fileID: 1693524367565056, guid: 2cdf63fb8b1725f4badd12bb72fc0a59,
+  _explodeAfterSeconds: 10
+  _bulletExplosion: {fileID: 198583065936285836, guid: 4d9182ed5e7aaa5459aa8b8d78e1ed1f,
     type: 2}
-  _behaviour: {fileID: 11400000, guid: cfbe8a5a3011c314b92dbb5ae997f771, type: 2}
+  _rotationSpeedIncrementX: 0.0005
+  _rotationSpeedIncrementY: 0.005
+  _rotationSpeedIncrementZ: 0.0005

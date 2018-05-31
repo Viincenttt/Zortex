@@ -61,6 +61,7 @@ MonoBehaviour:
   _enemiesToSpawn:
   - {fileID: 1402623447424564, guid: 987f9cb1609828c47b30a4b6bace4a3b, type: 2}
   - {fileID: 1769409061677396, guid: 1c9f0874b703a714caf4e79496c7ab7c, type: 2}
+  - {fileID: 1466595599053354, guid: d3372c58ac1a2ab46b84e460509e16ba, type: 2}
   _effectToSpawn: {fileID: 1037395497828698, guid: e4ccfba607cf0064ebdd29dcc167cd46,
     type: 2}
 --- !u!114 &114582985437435114
