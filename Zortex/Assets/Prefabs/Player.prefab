@@ -51,6 +51,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4602237087643824}
+  - component: {fileID: 64655498816220218}
   - component: {fileID: 65678974153568068}
   - component: {fileID: 114143173123548800}
   - component: {fileID: 114894364714506370}
@@ -230,6 +231,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &64655498816220218
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1138877997192028}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 993ffd7f99e00e3449b28ec2f9406358, type: 3}
 --- !u!65 &65678974153568068
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -238,7 +253,7 @@ BoxCollider:
   m_GameObject: {fileID: 1138877997192028}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 0.35400534, z: 1.1779826}
   m_Center: {x: 0, y: -0.016801119, z: 0.088991284}
