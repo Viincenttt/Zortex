@@ -1,6 +1,9 @@
 # Zortex
 Zortex is a singleplayer virtual reality space-shooter game that was built in Unity. The player controls a miniature spaceship using the Oculus Touch or HTC Vive controllers. The goal of the game is to stay alive for as long as possible, while destroying as many alien spaceships as possible. The game is based on the Xortex game that is part of [The Lab](https://store.steampowered.com/app/450390/), created by Valve. 
 
+![alt text](https://github.com/Viincenttt/Zortex/blob/master/Screenshots/Game%20impression%202.png "Game impression 2")
+*Things can get hectic rather fast*
+
 ### Technologies
 The game is built in Unity and uses SteamVR and the VRTK library to add support for virtual reality. All game code is written in C# and the 3D models were created using Blender. All assets in the game are self-made, except for the music and sound-effects. 
 
