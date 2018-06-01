@@ -4,17 +4,16 @@ Zortex is a singleplayer virtual reality space-shooter game that was built in Un
 ![alt text](https://github.com/Viincenttt/Zortex/blob/master/Screenshots/Game%20impression%202.png "Game impression")
 
 ### Project features
-The game is built up very modular and it can be configured to be easy or incredibly difficult. 
 
 #### Enemy spawning configuration
-The enemy spawn area has extensive configuration options. These options allow you to configure the enemy spawning area size, which enemies to spawn and how fast enemies are spawned. 
+The enemy spawn area has extensive configuration options. This allows you to tweak the difficulty of the game. You can configure the enemy spawning area size, which enemy types to spawn and how fast enemies are spawned. 
 
 ![alt text](https://github.com/Viincenttt/Zortex/blob/master/Screenshots/Enemy%20spawnarea%20configuration.png "Enemy spawner configuration options")
 
 *The configuration options of the enemy spawn area*
 
 #### Player vision
-The player ship automatically targets and fires at enemy ships when they are in the player ship's visible area. The vision of the player ship is configurable within Unity. It uses a view angle, so targets that are far away don't require very precise aiming.
+The player ship automatically targets and fires at enemy ships when they are in the player ship's visible area. The vision of the player ship is configurable within Unity. While play-testing the game, I discovered that using a view angle for the player ship offers the best gameplay. The view angle functions like an aim-assist, enemy targets that are far away do not require very precise aiming. 
 
 ![alt text](https://github.com/Viincenttt/Zortex/blob/master/Screenshots/Player%20vision.png "The player view angle")
 
@@ -25,7 +24,7 @@ The player ship automatically targets and fires at enemy ships when they are in 
 *The configuration of the player ship view*
 
 ### Technologies
-The game is built in Unity and uses SteamVR and the VRTK library to add support for virtual reality. All game code is written in C# and the 3D models were created using Blender. All assets in the game are self-made, except for the music and sound-effects. 
+The game is built in Unity and uses SteamVR and the VRTK library to add support for virtual reality. All 3D models in this game were created using Blender. All game code is written in C# using Visual Studio 2017. All assets in this game are self-made, except for the music and sound-effects. 
 
 ### Credits
 #### Music
