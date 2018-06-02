@@ -13,7 +13,7 @@ The enemy spawn area has extensive configuration options. This allows you to twe
 *The configuration options of the enemy spawn area*
 
 #### Player vision
-The player ship automatically targets and fires at enemy ships when they are in the player ship's visible area. The vision of the player ship is configurable within Unity. While play-testing the game, I discovered that using a view angle for the player ship offers the best gameplay. The view angle functions like an aim-assist, enemy targets that are far away do not require very precise aiming. 
+The player ship automatically targets and fires at enemy ships when they enter the players visible area. The vision of the player ship can be configured from within Unity. While play-testing the game, I discovered that using a view angle for the player ship offers the best gameplay. The view angle functions like an aim-assist, enemy targets that are far away do not require very precise aiming. 
 
 ![alt text](https://github.com/Viincenttt/Zortex/blob/master/Screenshots/Player%20vision.png "The player view angle")
 
@@ -24,7 +24,7 @@ The player ship automatically targets and fires at enemy ships when they are in 
 *The configuration of the player ship view*
 
 ### Technologies
-The game is built in Unity and uses SteamVR and the VRTK library to add support for virtual reality. All 3D models in this game were created using Blender. All game code is written in C# using Visual Studio 2017. All assets in this game are self-made, except for the music and sound-effects. 
+The game is built in Unity and uses SteamVR and the VRTK library to add support for virtual reality. All 3D models in this game were created using Blender. The game code is written in C# using Visual Studio 2017. All assets in this game are self-made, except for the music and sound-effects. 
 
 ### Credits
 #### Music
